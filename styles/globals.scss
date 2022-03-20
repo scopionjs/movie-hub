@@ -1,0 +1,232 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+$primary: #1c374a;
+$scent: rgb(69, 69, 209);
+nav {
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  height: 65px;
+  z-index: 999;
+  div {
+    display: flex;
+    background-color: #1c374a;
+    height: 100%;
+    width: 100%;
+    div.left {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      h1 {
+        text-transform: uppercase;
+        color: white;
+        font-family: sans-serif;
+        cursor: not-allowed;
+        &::after {
+          content: "hub";
+          color: rgb(69, 69, 209);
+        }
+      }
+    }
+    div.center {
+      flex-grow: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      div {
+        width: 70%;
+        margin-inline: auto;
+
+        height: 45px;
+        background-color: $primary;
+        button {
+          width: 20%;
+          border-style: none;
+          border: 1px $primary solid;
+          border-right: none;
+          background-color: rgb(69, 69, 209);
+          border-top-left-radius: 10px;
+          border-bottom-left-radius: 10px;
+          cursor: pointer;
+          svg {
+            cursor: pointer;
+            color: white;
+          }
+        }
+        input {
+          width: 80%;
+          outline-style: none;
+          height: 100%;
+          border-bottom-right-radius: 10px;
+          border-top-right-radius: 10px;
+          caret-color: $scent;
+          color: $scent;
+
+          font-weight: 700;
+          font-family: sans-serif;
+        }
+      }
+    }
+    div.right {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      a {
+        color: white;
+        font-weight: bolder;
+      }
+      a:first-child {
+        color: $scent;
+        svg {
+          font-size: 35px;
+        }
+      }
+    }
+  }
+}
+.intro {
+  height: calc(100vh - 65px);
+  width: 100%;
+  background-image: url("../public/slider2.jpg");
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: darken;
+  position: relative;
+  div {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(87, 78, 78, 0.4);
+    div {
+      text-align: center;
+      width: 35%;
+      margin-left: 8%;
+      height: 100px;
+      position: absolute;
+      top: 20%;
+      p {
+        color: white;
+        font-size: 40px;
+        font-weight: 700;
+        font-family: sans-serif;
+      }
+      button {
+        width: 35%;
+        height: 50px;
+        background-color: $scent;
+        color: white;
+        border-style: none;
+        border: 2px white solid;
+        border-radius: 10px;
+        font-family: sans-serif;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.title1 {
+  text-align: center;
+  h2 {
+    text-transform: capitalize;
+  }
+  div {
+    width: 90px;
+    height: 7px;
+    background-color: $scent;
+    margin-inline: auto;
+    border-radius: 7px;
+  }
+}
+.trends {
+  margin-block: 15px;
+  border-left: 5px white solid;
+  div {
+    display: inline-block;
+    width: 200px;
+    height: 450px;
+
+    background-color: $primary;
+    margin-bottom: 5px;
+    border-right: 5px white solid;
+    div {
+      border: none;
+      margin: 0;
+      position: relative;
+      width: 100%;
+      height: 60%;
+    }
+  }
+  section {
+    text-align: center;
+    h3 {
+      color: white;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+    div {
+      color: $scent;
+    }
+    p {
+      color: white;
+      font-size: 13px;
+    }
+    button {
+      height: 37px;
+      width: 60%;
+      margin-inline: auto;
+      background-color: $scent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-style: none;
+      border-radius: 6px;
+      gap: 3px;
+      cursor: pointer;
+      p {
+        font-weight: bold;
+      }
+      svg {
+        color: white;
+      }
+    }
+  }
+}
+footer {
+  height: 60px;
+  background-color: $primary;
+  width: 100%;
+  display: block;
+  div {
+    height: 100%;
+    width: 80%;
+    margin-inline: auto;
+    text-align: center;
+
+    p {
+      color: white;
+      font-weight: bolder;
+      font-size: 14px;
+      span {
+        text-transform: uppercase;
+        color: $scent;
+      }
+    }
+  }
+}
