@@ -197,7 +197,11 @@ export default function Home({ data, data1 }) {
         <div></div>
       </div>
       <Trends data={data} />
-      <BoxOffice />
+      <div className="title1">
+        <h2>box office</h2>
+        <div></div>
+      </div>
+      <BoxOffice data={data1} />
       <Footer />
     </div>
   );

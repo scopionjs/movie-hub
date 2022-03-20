@@ -19,6 +19,11 @@ export default function Nav() {
             </div>
           </div>
           <div className="right">
+            <div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
             <Link href="/">
               <a>
                 <HomeIcon />
