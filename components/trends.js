@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import StarIcon from "@mui/icons-material/Star";
 import VisibilityIcon from "@mui/icons-material/Visibility";
@@ -26,10 +27,12 @@ export default function Trends({ data }) {
                 <StarIcon />
               </div>
               <p>{data.year}</p>
-              <button id={data.id} onClick={ViewMovie}>
-                <VisibilityIcon />
-                <p>view</p>
-              </button>
+              <Link href={`/view-movie/${data.id}`}>
+                <a>
+                  <VisibilityIcon />
+                  <p>view</p>
+                </a>
+              </Link>
             </section>
           </div>
         ))}
