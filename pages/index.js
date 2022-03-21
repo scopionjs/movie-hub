@@ -192,6 +192,7 @@ export default function Home({ data, data1 }) {
     <div>
       <Nav />
       <Intro />
+
       <div className="title1">
         <h2>trending movies</h2>
         <div></div>
