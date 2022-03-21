@@ -309,6 +309,46 @@ footer {
     }
   }
 }
+.view-video {
+  iframe {
+    margin-inline: 1%;
+  }
+  section {
+    text-align: center;
+    position: relative;
+    h1 {
+      color: $scent;
+    }
+    p {
+      color: $scent;
+      span {
+        font-size: 15px;
+        font-weight: 800;
+      }
+    }
+    button {
+      position: absolute;
+      left: 4px;
+      top: 0;
+      height: 45px;
+      width: 60px;
+      background-color: $primary;
+      border-style: none;
+      border-radius: 7px;
+      color: white;
+      cursor: pointer;
+      &:hover,
+      :active {
+        background-color: white;
+        color: $primary;
+        border: 2px $primary solid;
+        svg {
+          border: none;
+        }
+      }
+    }
+  }
+}
 @media screen and (max-width: 1200px) {
   .trends {
     div {
