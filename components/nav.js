@@ -32,7 +32,12 @@ export default function Nav() {
               <input type="text" />
             </div>
           </div>
-          <div onClick={sideBar} className="right">
+          <div
+            onTouchStart={sideBar}
+            onChange={sideBar}
+            onClick={sideBar}
+            className="right"
+          >
             <div>
               <div></div>
               <div></div>
