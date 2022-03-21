@@ -6,15 +6,15 @@ export default function Nav() {
   let bar = React.useRef();
   let sideBar = () => {
     // bar.current.style = " color:red;";
-
+    // bar.current.classList.toggle("see");
     if (bar.current.classList.value == "see") {
+      bar.current.style = " display:none;";
       bar.current.classList.toggle("see");
-      bar.current.style =
-        "display:none;transition-property: all;transition-duration: 3s";
     } else {
-      bar.current.style = "transition-property: all;transition-duration: 3s";
+      bar.current.style = "";
       bar.current.classList.toggle("see");
     }
+    console.log(bar.current.classList);
   };
   return (
     <>
@@ -32,12 +32,7 @@ export default function Nav() {
               <input type="text" />
             </div>
           </div>
-          <div
-            onTouchStart={sideBar}
-            onChange={sideBar}
-            onClick={sideBar}
-            className="right"
-          >
+          <div onClick={sideBar} className="right">
             <div>
               <div></div>
               <div></div>
@@ -60,11 +55,7 @@ export default function Nav() {
           </div>
         </div>
       </nav>
-      <div
-        className="side-bar"
-        style={{ backgroundColor: "#1c374a" }}
-        ref={bar}
-      >
+      <div className="" style={{ display: "none" }} ref={bar}>
         <div>
           <Link href="/">
             <a>
